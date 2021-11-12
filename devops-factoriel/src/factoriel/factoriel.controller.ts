@@ -11,7 +11,7 @@ export class FactorielController {
   }
 
   @Get(':id')
-  getTodo(@Param('id') id: number): number {
+  getfact(@Param('id') id: number): number {
     return this.fatorielService.factorial(id);
   }
 }
