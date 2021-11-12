@@ -16,3 +16,19 @@ describe('FatorielService', () => {
     expect(service).toBeDefined();
   });
 });
+
+describe('factorialService', () => {
+  let service: FatorielService;
+
+  beforeEach(() => {
+    service = new FatorielService();
+  });
+  describe('factorial', () => {
+    it('should return the factorial', async () => {
+      const result = 120;
+      jest.spyOn(service, 'factorial').mockImplementation(() => result);
+
+      expect(await service.factorial(5)).toBe(result);
+    });
+  });
+});
